@@ -43,7 +43,8 @@ services:
           - kobocat.internal
 
   kpi:
-    image: kobotoolbox/kpi:2.022.44c
+    #image: kobotoolbox/kpi:2.022.44c
+    image: kpi-mm:latest
     hostname: kpi
     env_file:
       - ../kobo-env/envfile.txt
@@ -108,8 +109,8 @@ services:
           - nginx.internal
 
   enketo_express:
-    #image: kobotoolbox/enketo-express-extra-widgets:5.0.0-nested-repeat-count-fix-retry-with-old-numeric-widgets
-    image: enketo-express-mm:latest
+    image: kobotoolbox/enketo-express-extra-widgets:5.0.0-nested-repeat-count-fix-retry-with-old-numeric-widgets
+    #image: enketo-express-mm:latest
     env_file:
       - ../kobo-env/envfile.txt
     restart: always
